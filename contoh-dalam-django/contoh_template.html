@@ -1,0 +1,22 @@
+{% load humanize %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kwitansi</title>
+</head>
+<body>
+    <h1>Kwitansi Pembayaran</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="angka_input">Masukkan Angka:</label>
+        <input type="number" name="angka_input" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if terbilang_angka %}
+        <p>{{ angka_input|int }} = {{ terbilang_angka }}</p>
+        <h2>Pembayaran</h2>
+        <p>Telah diterima sejumlah pembayaran dari {{ user }} sebanyak Rp {{ angka_input | intcomma }}</p>
+        <p>Terbilang: <i>{{ terbilang_angka }}</i> Rupiah</p>
+    {% endif %}
+</body>
+</html>
