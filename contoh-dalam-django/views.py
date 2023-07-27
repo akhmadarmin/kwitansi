@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from invoice.terbilang import Kwitansi
+from .terbilang import Kwitansi
 
 def kwitansi(request):
     if request.method == 'POST':
