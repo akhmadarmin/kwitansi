@@ -46,7 +46,22 @@ from nama_projects.atur import group_required
 @group_required('Group 1', 'Group 2')
 def nama_views(request):
 	pass 
+
 	
 seperti itu.....
 
 ==============================
+
+gambar_ppt.py
+
+Script buat insert gambar di folder dan subfolder ke file powerpoint
+dalam 5 baris dan 10 kolom yang jelas untuk skala besar
+dengan nama file gambar yang tulisan karakternya sembarangan
+
+pertama install
+
+pip install python-pptx
+
+Ubah variabel folder_utama dengan path ke folder utama dan karakter dengan karakter yang akan difilter. 
+karena skrip ini cari semua gambar dalam folder dan sub-folder yang nama filenya mengandung karakter yang ditentukan
+dan menyusunnya dalam slide dengan 5 baris dan 10 kolom.
